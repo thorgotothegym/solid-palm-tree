@@ -5,6 +5,8 @@ import { CustomHeader } from "../../components/CustomHeader";
 
 import { Petrol } from "../Petrol";
 
+import "../../../../styles/global.css";
+
 export const Layout = (): JSX.Element => {
   return (
     <>

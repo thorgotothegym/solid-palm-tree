@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Petrol() {
+export const Petrol = (): JSX.Element => {
   return (
     <>
-      <h1>Welcome to PetrolStation</h1>
+      <h1></h1>
     </>
   );
-}
+};
