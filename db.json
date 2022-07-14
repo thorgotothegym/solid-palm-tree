@@ -18,5 +18,75 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "petrol": [
+    {
+      "id": "62d03609426b9f5bb0e8dc4b",
+      "nameGasStation": "BIOTICA",
+      "pricePer1Liter": 4,
+      "pricePer3Liter": 9,
+      "pricePer5Liter": 14.5,
+      "pricePer15Liter": 41,
+      "gasoline1LPrice": 0,
+      "gasoline3LPrice": 0,
+      "gasoline5LPrice": 0,
+      "gasoline15LPrice": 0,
+      "total1Liter": 0,
+      "total3Liter": 0,
+      "total5Liter": 0,
+      "total15Liter": 0,
+      "totalPrice": 0
+    },
+    {
+      "id": "62d0360906459f96ea37c36e",
+      "nameGasStation": "MEDESIGN",
+      "pricePer1Liter": 3.7,
+      "pricePer3Liter": 9,
+      "pricePer5Liter": 14,
+      "pricePer15Liter": 41.5,
+      "gasoline1LPrice": 0,
+      "gasoline3LPrice": 0,
+      "gasoline5LPrice": 0,
+      "gasoline15LPrice": 0,
+      "total1Liter": 0,
+      "total3Liter": 0,
+      "total5Liter": 0,
+      "total15Liter": 0,
+      "totalPrice": 0
+    },
+    {
+      "id": "62d0360975113178b630ab47",
+      "nameGasStation": "CHILLIUM",
+      "pricePer1Liter": 4,
+      "pricePer3Liter": 9,
+      "pricePer5Liter": 14.5,
+      "pricePer15Liter": 41.5,
+      "gasoline1LPrice": 0,
+      "gasoline3LPrice": 0,
+      "gasoline5LPrice": 0,
+      "gasoline15LPrice": 0,
+      "total1Liter": 0,
+      "total3Liter": 0,
+      "total5Liter": 0,
+      "total15Liter": 0,
+      "totalPrice": 0
+    },
+    {
+      "id": "62d03609096a1a779c9a692c",
+      "nameGasStation": "ASIMILINE",
+      "pricePer1Liter": 4,
+      "pricePer3Liter": 9.5,
+      "pricePer5Liter": 15,
+      "pricePer15Liter": 41.5,
+      "gasoline1LPrice": 0,
+      "gasoline3LPrice": 0,
+      "gasoline5LPrice": 0,
+      "gasoline15LPrice": 0,
+      "total1Liter": 0,
+      "total3Liter": 0,
+      "total5Liter": 0,
+      "total15Liter": 0,
+      "totalPrice": 0
+    }
+  ]
 }
