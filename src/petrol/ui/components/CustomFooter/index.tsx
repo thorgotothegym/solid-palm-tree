@@ -1,5 +1,5 @@
 import React from "react";
 
 export const CustomFooter = (): JSX.Element => {
-  return <footer></footer>;
+  return <footer>footer</footer>;
 };
