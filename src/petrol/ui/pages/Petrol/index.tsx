@@ -11,6 +11,7 @@ export const Petrol = (): JSX.Element => {
         return (
           <FuelStation
             id={item.id}
+            key={item.id}
             nameGasStation={item.nameGasStation}
             pricePer1Liter={item.pricePer1Liter}
             pricePer3Liter={item.pricePer3Liter}
