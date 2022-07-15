@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import GasStation from "../../../domain/entities/GasStation";
 
+import usePetrolStations from "../../../infraestruture/hooks/mutations/usePetrolStations";
+
 export const FuelStation = ({
   gasoline15LPrice,
   gasoline1LPrice,
@@ -38,11 +40,31 @@ export const FuelStation = ({
     pricePer3Liter: pricePer3Liter,
     pricePer5Liter: pricePer5Liter,
   });
-  const calculateTotalPrice = () => {};
-  const sumatoria = () => {};
+  const updatePetrolStation = usePetrolStations();
   const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    calculateTotalPrice();
+    updatePetrolStation.mutate({
+      gasoline15LPrice: form.gasoline15LPrice,
+      gasoline1LPrice: form.gasoline1LPrice,
+      gasoline3LPrice: form.gasoline3LPrice,
+      gasoline5LPrice: form.gasoline5LPrice,
+      nameGasStation: form.nameGasStation,
+      total15Liter: form.total15Liter,
+      total1Liter: form.total1Liter,
+      total3Liter: form.total3Liter,
+      total5Liter: form.total5Liter,
+      totalLiter: form.totalLiter,
+      totalPrice:
+        form.gasoline1LPrice * form.pricePer1Liter +
+        form.gasoline3LPrice * form.pricePer3Liter +
+        form.gasoline5LPrice * form.pricePer5Liter +
+        form.gasoline15LPrice * form.pricePer15Liter,
+      id: form.id,
+      pricePer15Liter: form.pricePer15Liter,
+      pricePer1Liter: form.pricePer1Liter,
+      pricePer3Liter: form.pricePer3Liter,
+      pricePer5Liter: form.pricePer5Liter,
+    });
     console.log("form", form);
   };
   return (
@@ -68,7 +90,7 @@ export const FuelStation = ({
       </Box>
       <form style={{ width: "100%" }} onSubmit={handleSubmitForm}>
         <button style={{ float: "right" }} type="submit">
-          send info
+          update!
         </button>
         <Box>
           <h1>1 Litre</h1>
@@ -82,7 +104,6 @@ export const FuelStation = ({
                 ...form,
                 gasoline1LPrice: Number(event.target.value),
               });
-              sumatoria();
             }}
           />
           x
@@ -91,7 +112,10 @@ export const FuelStation = ({
             readOnly
             placeholder={String(pricePer1Liter)}
           />{" "}
-          total price: {form.gasoline1LPrice * form.pricePer1Liter}
+          <p>
+            total price per 1L: {form.gasoline1LPrice * form.pricePer1Liter}
+          </p>
+          <p>total litres per 1L: {form.gasoline1LPrice}</p>
         </Box>
         <br />
         <Box>
@@ -109,7 +133,10 @@ export const FuelStation = ({
           />{" "}
           x{" "}
           <input type="number" readOnly placeholder={String(pricePer3Liter)} />{" "}
-          total price: {form.gasoline3LPrice * form.pricePer3Liter}
+          <p>
+            total price per 3L: {form.gasoline3LPrice * form.pricePer3Liter}
+          </p>
+          <p>total litres per 3L: {form.gasoline3LPrice}</p>
         </Box>
         <Box>
           <h1>5 Litre</h1>
@@ -126,7 +153,10 @@ export const FuelStation = ({
           />{" "}
           x{" "}
           <input type="number" readOnly placeholder={String(pricePer5Liter)} />{" "}
-          total price: {form.gasoline5LPrice * form.pricePer5Liter}
+          <p>
+            total price per 5L: {form.gasoline5LPrice * form.pricePer5Liter}
+          </p>
+          <p>total litres per 5L: {form.gasoline5LPrice}</p>
         </Box>
         <Box>
           <h1>15 Litre</h1>
@@ -143,13 +173,25 @@ export const FuelStation = ({
           />{" "}
           x{" "}
           <input type="number" readOnly placeholder={String(pricePer15Liter)} />{" "}
-          total price: {form.gasoline15LPrice * form.pricePer15Liter}
+          <p>
+            total price per 15L: {form.gasoline15LPrice * form.pricePer15Liter}
+          </p>
+          <p>total litres per 15L: {form.gasoline15LPrice}</p>
           <h1>
             TOTAL PRICE IS{" "}
             {form.gasoline1LPrice * form.pricePer1Liter +
               form.gasoline3LPrice * form.pricePer3Liter +
               form.gasoline5LPrice * form.pricePer5Liter +
-              form.gasoline15LPrice * form.pricePer15Liter}
+              form.gasoline15LPrice * form.pricePer15Liter}{" "}
+            €
+          </h1>
+          <h1>
+            LITERS:{" "}
+            {form.gasoline1LPrice +
+              form.gasoline3LPrice +
+              form.gasoline5LPrice +
+              form.gasoline15LPrice}{" "}
+            L
           </h1>
         </Box>
       </form>
