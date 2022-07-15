@@ -1,3 +1,3 @@
-export enum WebSocketQueryKeys {
-  DOCUMENTS = "documents",
+export enum CommonQueryKeys {
+  PETROLSTATIONS = "petrol-stations",
 }
