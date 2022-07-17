@@ -3,7 +3,7 @@ import React from "react";
 import { CustomFooter } from "../../components/CustomFooter";
 import { CustomHeader } from "../../components/CustomHeader";
 
-import { Petrol } from "../Petrol";
+import Petrol from "../Petrol";
 
 import "../../../../styles/global.css";
 

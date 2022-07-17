@@ -2,7 +2,7 @@ import React from "react";
 import useFindPetrolStations from "../../../infraestruture/hooks/queries/useFindPetrolStations";
 import { FuelStation } from "../../components/FuelStation";
 
-export const Petrol = (): JSX.Element => {
+const Petrol = (): JSX.Element => {
   const { isLoading, data } = useFindPetrolStations();
   return (
     <>
@@ -33,3 +33,4 @@ export const Petrol = (): JSX.Element => {
     </>
   );
 };
+export default React.memo(Petrol);
