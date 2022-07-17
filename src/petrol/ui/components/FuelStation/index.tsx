@@ -80,6 +80,7 @@ export const FuelStation = ({
         marginBottom: "20px",
         padding: "20px",
       }}
+      data-testid="fuelStation"
     >
       <Box
         sx={{
@@ -105,12 +106,14 @@ export const FuelStation = ({
                 gasoline1LPrice: Number(event.target.value),
               });
             }}
+            data-testid="gasoline1LPrice"
           />
           x
           <input
             type="number"
             readOnly
             placeholder={String(pricePer1Liter)}
+            data-testid="pricePer1Liter"
           />{" "}
           <p>
             total price per 1L: {form.gasoline1LPrice * form.pricePer1Liter}
@@ -130,9 +133,15 @@ export const FuelStation = ({
                 gasoline3LPrice: Number(event.target.value),
               })
             }
+            data-testid="gasoline3LPrice"
           />{" "}
           x{" "}
-          <input type="number" readOnly placeholder={String(pricePer3Liter)} />{" "}
+          <input
+            type="number"
+            readOnly
+            placeholder={String(pricePer3Liter)}
+            data-testid="pricePer3Liter"
+          />{" "}
           <p>
             total price per 3L: {form.gasoline3LPrice * form.pricePer3Liter}
           </p>
@@ -150,9 +159,15 @@ export const FuelStation = ({
                 gasoline5LPrice: Number(event.target.value),
               })
             }
+            data-testid="gasoline5LPrice"
           />{" "}
           x{" "}
-          <input type="number" readOnly placeholder={String(pricePer5Liter)} />{" "}
+          <input
+            type="number"
+            readOnly
+            placeholder={String(pricePer5Liter)}
+            data-testid="pricePer5Liter"
+          />{" "}
           <p>
             total price per 5L: {form.gasoline5LPrice * form.pricePer5Liter}
           </p>
@@ -170,9 +185,15 @@ export const FuelStation = ({
                 gasoline15LPrice: Number(event.target.value),
               })
             }
+            data-testid="gasoline15LPrice"
           />{" "}
           x{" "}
-          <input type="number" readOnly placeholder={String(pricePer15Liter)} />{" "}
+          <input
+            type="number"
+            readOnly
+            placeholder={String(pricePer15Liter)}
+            data-testid="pricePer15Liter"
+          />{" "}
           <p>
             total price per 15L: {form.gasoline15LPrice * form.pricePer15Liter}
           </p>
