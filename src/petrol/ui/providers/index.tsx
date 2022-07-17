@@ -10,9 +10,8 @@ import { ReactQueryDevtools } from "react-query/devtools";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      refetchOnWindowFocus: false,
       keepPreviousData: true,
-      retry: false,
+      refetchInterval: 30000,
       onError: () => {
         console.log("error");
       },
