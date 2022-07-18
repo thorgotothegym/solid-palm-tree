@@ -1,7 +1,7 @@
 import putPetrolStations from "../../../infraestruture/repositories/putPetrolStations";
 import GasStation from "../../entities/GasStation";
 
-export default function usePetrolStations({
+export default async function updatePetrol({
   gasoline15LPrice,
   gasoline1LPrice,
   gasoline3LPrice,
@@ -19,7 +19,7 @@ export default function usePetrolStations({
   totalLiter,
   totalPrice,
 }: GasStation) {
-  return putPetrolStations({
+  return await putPetrolStations({
     gasoline15LPrice,
     gasoline1LPrice,
     gasoline3LPrice,
